@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     get 'followers' => 'relationships#followers', as: 'followers'
   end
 
-  resources :groups
-  
+  resources :groups do
+    get "join" => "groups#join"
+  end
+
 end
